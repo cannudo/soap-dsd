@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:lis="http://listadechamadawebservice/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <lis:adicionarAluno>
+         <arg0>{matricula}</arg0>
+         <arg1>{nome}</arg1>
+      </lis:adicionarAluno>
+   </soapenv:Body>
+</soapenv:Envelope>
