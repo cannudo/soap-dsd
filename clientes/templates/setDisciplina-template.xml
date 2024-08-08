@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:lis="http://listadechamadawebservice/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <lis:setDisciplina>
+         <arg0>{disciplina}</arg0>
+      </lis:setDisciplina>
+   </soapenv:Body>
+</soapenv:Envelope>
