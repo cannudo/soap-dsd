@@ -1,9 +1,14 @@
 import zeep
 
-url = 'http://10.25.1.14:5859/chamadasoap?wsdl'
+# python3 professor-xml.py [ip] [porta]
+if len(sys.argv) == 3:
+    ip = sys.argv[1]
+    port = sys.argv[2]
+    url = f"http://{ip}:{port}/chamadasoap?wsdl"
+else:
+    url = f"http://127.0.0.1:5859/chamadasoap?wsdl"
 
 client = zeep.Client(wsdl = url)
-client.service.getProfessor()
 
 def mostrarMenu():
     print("1 - Mostrar nome do professor")
