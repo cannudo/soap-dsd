@@ -6,11 +6,11 @@ client = zeep.Client(wsdl = url)
 client.service.getProfessor()
 
 def mostrarMenu():
-    print("1 - Mostrar nome do Professor")
-    print("2 - Alterar nomde do Professor")
-    print("3 - Alterar nome da Disciplina")
-    print("4 - Ver nome da Disciplina")
-    print("5 - Listar Alunos")
+    print("1 - Mostrar nome do professor")
+    print("2 - Alterar nome do professor")
+    print("3 - Alterar nome da disciplina")
+    print("4 - Mostrar nome da disciplina")
+    print("5 - Mostrar alunos")
     print("0 - Sair")
     opcao = input("Digite a opção desejada: ")
     return opcao
