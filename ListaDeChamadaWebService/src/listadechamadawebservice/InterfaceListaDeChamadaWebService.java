@@ -13,7 +13,7 @@ public interface InterfaceListaDeChamadaWebService {
     @WebMethod void setDisciplina(String disciplina);
     @WebMethod String getData();
     @WebMethod void setData(String data);
-    @WebMethod Aluno[] getAlunos();
+    @WebMethod String getAlunos();
     @WebMethod int getQuantidadeDeAlunos();
     @WebMethod void setQuantidadeDeAlunos(int quantidadeDeAlunos);
     @WebMethod void adicionarAluno(String matricula, String nome);

@@ -19,7 +19,8 @@ public class ListaDeChamadaWebService implements InterfaceListaDeChamadaWebServi
     }
 
     public String getProfessor() {
-        return professor;
+        String retorno = "Nome do professor: " + professor;
+        return retorno;
     }
 
     public void setProfessor(String professor) {
@@ -42,8 +43,12 @@ public class ListaDeChamadaWebService implements InterfaceListaDeChamadaWebServi
         this.data = data;
     }
 
-    public Aluno[] getAlunos() {
-        return alunos;
+    public String getAlunos() {
+        StringBuilder lista = new StringBuilder();
+        for (int i = 0; i < this.quantidadeDeAlunos; i++) {
+            lista.append(this.alunos[i].getMatricula()).append(" - ").append(this.alunos[i].getNome()).append("\n");
+        }
+        return lista.toString();
     }
 
     public void setAlunos(Aluno[] alunos) {
@@ -64,12 +69,13 @@ public class ListaDeChamadaWebService implements InterfaceListaDeChamadaWebServi
     }
     
     public String toString() {
-        String lista = "Lista de Chamada\n";
-        lista += "Professor: " + this.professor + "\n";
-        lista += "Disciplina: " + this.disciplina + "\n";
-        lista += "Data: " + this.data + "\n";
-        lista += "Alunos:\n";
+        String lista = "• Lista de Chamada\n";
+        lista += "\t• Professor: " + this.professor + "\n";
+        lista += "\t• Disciplina: " + this.disciplina + "\n";
+        lista += "\t• Data: " + this.data + "\n";
+        lista += "\t• Alunos:\n";
         for (int i = 0; i < this.quantidadeDeAlunos; i++) {
+            lista += "\t\t• ";
             lista += this.alunos[i].getMatricula() + " - " + this.alunos[i].getNome() + "\n";
         }
         lista+= "\n";
